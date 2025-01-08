@@ -11,10 +11,7 @@ video {
 }
 
 .billede-grid img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 100%;
   aspect-ratio: 1/1;
@@ -23,7 +20,7 @@ video {
 
 .galleri-image-container {
   position: relative;
-  width: 100%;
+  max-width: 100%;
 }
 
 .galleri-image-container img {
@@ -31,16 +28,35 @@ video {
   width: 100%;
 }
 
-.keeper-overlay-text,
-.drop-overlay-text,
+.drop-image-overlay-text,
+.drop-3d-overlay-text,
 .a-short-talk-3d-overlay-text,
 .a-short-talk-interview-overlay-text {
   position: absolute;
-  top: 85%;
-  left: 1rem;
   color: var(--main_color);
   font-size: 40pt;
   font-family: var(--h123_font);
+}
+
+.a-short-talk-interview-overlay-text {
+  top: -5%;
+  left: 60%;
+}
+
+.a-short-talk-3d-overlay-text {
+  top: 80%;
+  left: 1%;
+  z-index: 100;
+}
+
+.drop-3d-overlay-text {
+  top: -4%;
+  left: -1%;
+}
+
+.drop-image-overlay-text {
+  top: 40%;
+  left: 10%;
 }
 
 @media (width > 700px) {
@@ -116,5 +132,26 @@ video {
     grid-column: 2/4;
     aspect-ratio: 2/1;
     object-position: center;
+  }
+
+  .a-short-talk-interview-overlay-text {
+    top: -7%;
+    left: 64%;
+  }
+
+  .a-short-talk-3d-overlay-text {
+    top: 92%;
+    left: -8%;
+    z-index: 100;
+  }
+
+  .drop-3d-overlay-text {
+    top: -5%;
+    left: -15%;
+  }
+
+  .drop-image-overlay-text {
+    top: 40%;
+    left: -15%;
   }
 }

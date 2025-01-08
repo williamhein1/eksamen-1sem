@@ -32,6 +32,13 @@ body {
   padding: 0;
 }
 
+footer a {
+  text-decoration: none;
+  font-family: var(--p_font);
+  font-size: var(--p_mobil_size);
+  color: black;
+}
+
 h1,
 h2,
 h3 {
@@ -96,8 +103,23 @@ section {
   color: black;
 }
 
+.link-container {
+  text-align: center;
+  font-family: var(--h123_font);
+}
+
+.link-container a {
+  color: transparent;
+  -webkit-text-stroke: #122adf 1px;
+}
+
+.link-container a:hover {
+  color: #122adf;
+  text-decoration: none;
+}
+
 .h2portfolio {
-  margin-top: 15rem;
+  margin-top: 13rem;
 }
 
 .logo {
@@ -113,45 +135,6 @@ section {
   margin-top: 14rem;
   margin-bottom: 12rem;
   text-align: center;
-}
-
-.old-background {
-  position: relative;
-  font-family: var(--h123_font);
-  color: transparent;
-  -webkit-text-stroke: var(--main_color) 1px;
-  font-size: 30pt;
-  transition: color 0.1s;
-}
-
-.our-landscape-designs-front-page:hover .old-background {
-  color: var(--main_color);
-}
-
-.a-short-talk-background {
-  position: relative;
-  font-family: var(--h123_font);
-  color: transparent;
-  -webkit-text-stroke: var(--main_color) 1px;
-  font-size: 30pt;
-  transition: color 0.1s;
-}
-
-.a-short-talk-front-page:hover .a-short-talk-background {
-  color: var(--main_color);
-}
-
-.fodboldspillet-background {
-  position: relative;
-  font-family: var(--h123_font);
-  color: transparent;
-  -webkit-text-stroke: var(--main_color) 1px;
-  font-size: 30pt;
-  transition: color 0.1s;
-}
-
-.fodboldspillet-front-page:hover .fodboldspillet-background {
-  color: var(--main_color);
 }
 
 footer {
@@ -187,6 +170,13 @@ footer {
   border-color: black;
 }
 
+#active {
+  display: inline-block;
+  border: 1.5px solid transparent;
+  border-radius: 50%;
+  border-color: black;
+}
+
 .menu-link.active {
   border-color: black;
 }
@@ -205,7 +195,7 @@ img {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 8rem;
-  line-height: 200%;
+  line-height: 250%;
 }
 
 .local-menu ul {
@@ -247,6 +237,7 @@ img {
 
 .h2projekt {
   margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .background-text-portfolio,
@@ -308,7 +299,9 @@ img {
 }
 
 .om-mig-forside {
+  margin: 3rem;
   margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 
 .OLD-hero {
@@ -349,7 +342,7 @@ img {
 
 .galleri img,
 .galleri video {
-  cursor: crosshair;
+  cursor: url("/assets/SVG/custom-curser.svg") 25 25, auto;
 }
 
 /* layout? */
@@ -401,6 +394,29 @@ img {
   z-index: 1;
 }
 
+.galleri-image-container img,
+.galleri-image-container video {
+  transition: 0.1s;
+}
+
+.galleri-image-container img:hover,
+.galleri-image-container video:hover {
+  transform: scale(1.01);
+}
+
+.cv ul li {
+  font-family: var(--h123_font);
+  line-height: 250%;
+  margin: 2rem auto;
+  margin-top: 0;
+}
+
+.cv-liste {
+  margin-top: 2rem;
+  grid-column: 2;
+  padding: 1rem;
+}
+
 /* media quiery */
 @media (width > 700px) {
   body {
@@ -419,7 +435,7 @@ img {
 
   h2 {
     text-align: left;
-    font-size: 20pt;
+    font-size: 30pt;
   }
 
   .background-text {
@@ -551,7 +567,7 @@ img {
   }
 
   .h1-om-mig {
-    margin-bottom: 0;
+    margin-bottom: -1rem;
     margin-top: 0;
   }
 
@@ -605,7 +621,7 @@ img {
 
   .h2portfolio {
     text-align: center;
-    font-size: 40pt;
+    font-size: 30pt;
     margin-bottom: 1rem;
     margin-top: 11rem;
   }
@@ -632,5 +648,24 @@ img {
 
   .projekt-nav {
     font-size: var(--h3_web_size);
+  }
+
+  footer a {
+    font-size: var(--p_web_size);
+  }
+
+  .link-container {
+    text-align: left;
+  }
+
+  .cv ul li {
+    font-family: var(--h123_font);
+    line-height: 250%;
+    text-align: left;
+  }
+
+  .galleri-image-container img:hover,
+  .galleri-image-container video:hover {
+    transform: scale(1.05);
   }
 }

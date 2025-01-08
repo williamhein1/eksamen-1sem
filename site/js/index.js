@@ -11,9 +11,9 @@ function indexStart(){
     changeImage();
     gemTekstGalleri();
 
-    document.querySelector(".keeper-img").addEventListener("mouseover", mouseoverKeeper);
+    document.querySelector(".drop-img").addEventListener("mouseover", mouseoverDrop);
 
-    document.querySelector(".drop-video").addEventListener("mouseover", mouseoverDrop);
+    document.querySelector(".drop-video").addEventListener("mouseover", mouseoverDrop3d);
 
     document.querySelector(".a-short-talk-3d-loop").addEventListener("mouseover", mouseoverAShortTalk3d);
 
@@ -25,7 +25,7 @@ function indexStart(){
 
 
 
-    document.querySelector(".keeper-img").addEventListener("mouseout", mouseOutGalleri);
+    document.querySelector(".drop-img").addEventListener("mouseout", mouseOutGalleri);
 
     document.querySelector(".drop-video").addEventListener("mouseout", mouseOutGalleri);
 
@@ -40,9 +40,9 @@ function indexStart(){
 function mouseOutGalleri(){
     console.log("gemmer tekst i galleri")
 
-    document.querySelector(".keeper-overlay-text").classList.add("hide");
+    document.querySelector(".drop-3d-overlay-text").classList.add("hide");
 
-    document.querySelector(".drop-overlay-text").classList.add("hide");
+    document.querySelector(".drop-image-overlay-text").classList.add("hide");
 
     document.querySelector(".a-short-talk-3d-overlay-text").classList.add("hide");
 
@@ -52,17 +52,17 @@ function mouseOutGalleri(){
 
 
 
-function mouseoverKeeper(){
-    console.log("keeper tekst vises")
-
-    document.querySelector(".keeper-overlay-text").classList.remove("hide");
-}
-
-
 function mouseoverDrop(){
     console.log("drop tekst vises")
 
-    document.querySelector(".drop-overlay-text").classList.remove("hide");
+    document.querySelector(".drop-image-overlay-text").classList.remove("hide");
+}
+
+
+function mouseoverDrop3d(){
+    console.log("drop tekst vises")
+
+    document.querySelector(".drop-3d-overlay-text").classList.remove("hide");
 }
 
 
@@ -87,9 +87,9 @@ function mouseoverAShortTalkVideo(){
 function gemTekstGalleri(){
     console.log("gemmer tekst i gelleri");
 
-    document.querySelector(".keeper-overlay-text").classList.add("hide");
+    document.querySelector(".drop-image-overlay-text").classList.add("hide");
 
-    document.querySelector(".drop-overlay-text").classList.add("hide");
+    document.querySelector(".drop-3d-overlay-text").classList.add("hide");
 
     document.querySelector(".a-short-talk-3d-overlay-text").classList.add("hide");
 
