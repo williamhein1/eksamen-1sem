@@ -100,26 +100,13 @@ function gemTekstGalleri(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// funktion til at skifte billede
 function changeImage() {
   images[currentIndex].classList.remove('active');
 
-  // opdater indekset
+
   currentIndex = (currentIndex + 1) % images.length;
 
-  // Tilføj "active"-klassen til det næste billede
+ 
   images[currentIndex].classList.add('active');
 }
 
